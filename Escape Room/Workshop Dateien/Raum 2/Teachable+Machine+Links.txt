@@ -1,0 +1,5 @@
+Teachable Machine Links:
+
+Posen: https://teachablemachine.withgoogle.com/models/ANbjKGJ5D/
+
+Totenschädel: https://teachablemachine.withgoogle.com/models/Icw7c4jZE/
