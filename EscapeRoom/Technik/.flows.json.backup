@@ -1,0 +1,3641 @@
+[
+    {
+        "id": "fe6c42b3020c2f20",
+        "type": "tab",
+        "label": "EscapeRoom",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2572ac62ce7c1cdf",
+        "type": "tab",
+        "label": "FlowToFix",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6fa62d3cf639421d",
+        "type": "subflow",
+        "name": "Multimedia Fenster-Schiebetür",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 20,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "053eb16051ade093"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1160,
+                "y": 560,
+                "wires": [
+                    {
+                        "id": "476d9eb4eb42865e",
+                        "port": 0
+                    },
+                    {
+                        "id": "08f66120ec46bab2",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "1f38efcab4d46bcb",
+        "type": "subflow",
+        "name": "Setup",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 500,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "4c17889fc5020234"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1140,
+                "y": 440,
+                "wires": [
+                    {
+                        "id": "6efc4587ab205f16",
+                        "port": 0
+                    },
+                    {
+                        "id": "a6fcce494cba93af",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "9e2f2656400a6bc4",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "2fc64b777ecd3f99",
+        "type": "subflow",
+        "name": "Room1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "a25c3025273e6556"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1240,
+                "y": 360,
+                "wires": [
+                    {
+                        "id": "4313aa96ee5638db",
+                        "port": 0
+                    },
+                    {
+                        "id": "99a853edeb487dcb",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "check1",
+                "type": "bool",
+                "value": "false"
+            },
+            {
+                "name": "check2",
+                "type": "bool",
+                "value": "false"
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "75f4edaae8eccb65",
+        "type": "subflow",
+        "name": "Room2",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "0a285bd8d7be21c0"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1040,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "7ab4b2ec5516262a",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "1b62e5719772c24e",
+        "type": "subflow",
+        "name": "Room3",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "b8b27f831db556d7"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 660,
+                "y": 340,
+                "wires": []
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "12ea3df3067aa2d2",
+        "type": "subflow",
+        "name": "Subflow 2",
+        "info": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 200,
+                "wires": []
+            }
+        ],
+        "out": []
+    },
+    {
+        "id": "bf7a2448618a44c0",
+        "type": "subflow",
+        "name": "morsecode",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "2b228f59724163c0"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1120,
+                "y": 760,
+                "wires": [
+                    {
+                        "id": "96b8a3c71d332220",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "0f6bb0577b9dbf44",
+        "type": "subflow",
+        "name": "morsecodeInput",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "6d1edbd16797e01b"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 760,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "70e1f2c3bd391fbb",
+                        "port": 0
+                    },
+                    {
+                        "id": "7c82472fc4d5416a",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "d4171ab7a5329fae",
+        "type": "subflow",
+        "name": "Numble",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "7e10f1d01a27846f"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 800,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "cf4379ce0869f25b",
+                        "port": 0
+                    },
+                    {
+                        "id": "4833e7596a678bc6",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "5780ee2bd2b12f4e",
+        "type": "subflow",
+        "name": "ARBrille Lichter",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "db8628e7d5dc7405"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1120,
+                "y": 440,
+                "wires": [
+                    {
+                        "id": "5eb674c2dd841754",
+                        "port": 0
+                    },
+                    {
+                        "id": "8854326d0ad4f808",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "3347a66305174949",
+        "type": "subflow",
+        "name": "Schaedel",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "61739da350a16f3c"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 440,
+                "y": 360,
+                "wires": [
+                    {
+                        "id": "49a8a9d5e2eead34",
+                        "port": 0
+                    },
+                    {
+                        "id": "86ca4520e6b3496c",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "2bbaa4d617b0dd5d",
+        "type": "subflow",
+        "name": "mordtat",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "a4acf5d2170ae0e5"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 400,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "b5522a6415d74843",
+                        "port": 0
+                    },
+                    {
+                        "id": "34f66836fbdbb9d2",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "cfaa662af1c8614c",
+        "type": "subflow",
+        "name": "brokenflow",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": []
+            }
+        ],
+        "out": [
+            {
+                "x": 520,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "5f02ef225717cacd",
+                        "port": 0
+                    },
+                    {
+                        "id": "db3c6526cb35d166",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "7f3ab95cd4f4305f",
+        "type": "openhab2-controller2",
+        "name": "test-controller",
+        "protocol": "http",
+        "host": "192.168.0.5",
+        "port": "8080",
+        "path": "",
+        "username": "openHABAdmin",
+        "password": "hJem2jz6",
+        "ohversion": "v3",
+        "token": ""
+    },
+    {
+        "id": "b11557cf80a5321e",
+        "type": "openhab2-out2",
+        "z": "6fa62d3cf639421d",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Schaltglas1_Schalten",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": true,
+        "x": 660,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57518f966880a835",
+        "type": "openhab2-out2",
+        "z": "6fa62d3cf639421d",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Schaltglas2_Schalten",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": true,
+        "x": 660,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f47370f652709ab7",
+        "type": "openhab2-get2",
+        "z": "6fa62d3cf639421d",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Fenster2_Position",
+        "topic": "",
+        "sendnull": false,
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "23c31a536e929bec"
+            ]
+        ]
+    },
+    {
+        "id": "df922496feced142",
+        "type": "openhab2-get2",
+        "z": "6fa62d3cf639421d",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Fenster3_Position",
+        "topic": "",
+        "sendnull": false,
+        "x": 1110,
+        "y": 220,
+        "wires": [
+            [
+                "967474b85be8de3c"
+            ]
+        ]
+    },
+    {
+        "id": "23c31a536e929bec",
+        "type": "switch",
+        "z": "6fa62d3cf639421d",
+        "name": "case open",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OPEN",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "OPEN",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 300,
+        "wires": [
+            [
+                "df922496feced142"
+            ],
+            [
+                "2e632cc63a8b4410"
+            ]
+        ]
+    },
+    {
+        "id": "a087db5c0685244e",
+        "type": "switch",
+        "z": "6fa62d3cf639421d",
+        "name": "case tilted",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "TILTED",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "TILTED",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "f47370f652709ab7"
+            ],
+            [
+                "2e632cc63a8b4410"
+            ]
+        ]
+    },
+    {
+        "id": "967474b85be8de3c",
+        "type": "switch",
+        "z": "6fa62d3cf639421d",
+        "name": "case closed",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CLOSED",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "CLOSED",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1090,
+        "y": 300,
+        "wires": [
+            [
+                "969c970b1cb49734"
+            ],
+            [
+                "2e632cc63a8b4410"
+            ]
+        ]
+    },
+    {
+        "id": "969c970b1cb49734",
+        "type": "function",
+        "z": "6fa62d3cf639421d",
+        "name": "function success",
+        "func": "msg.payload = \"ON\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 440,
+        "wires": [
+            [
+                "476d9eb4eb42865e",
+                "57518f966880a835",
+                "b11557cf80a5321e"
+            ]
+        ]
+    },
+    {
+        "id": "2e632cc63a8b4410",
+        "type": "function",
+        "z": "6fa62d3cf639421d",
+        "name": "function fail",
+        "func": "msg.payload = \"OFF\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 440,
+        "wires": [
+            [
+                "57518f966880a835",
+                "b11557cf80a5321e",
+                "08f66120ec46bab2"
+            ]
+        ]
+    },
+    {
+        "id": "053eb16051ade093",
+        "type": "openhab2-get2",
+        "z": "6fa62d3cf639421d",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Fenster1_Position",
+        "topic": "",
+        "sendnull": false,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "a087db5c0685244e"
+            ]
+        ]
+    },
+    {
+        "id": "476d9eb4eb42865e",
+        "type": "change",
+        "z": "6fa62d3cf639421d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08f66120ec46bab2",
+        "type": "change",
+        "z": "6fa62d3cf639421d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a6fcce494cba93af",
+        "type": "openhab2-out2",
+        "z": "1f38efcab4d46bcb",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Schaltglas1_Schalten",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 880,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6efc4587ab205f16",
+        "type": "openhab2-out2",
+        "z": "1f38efcab4d46bcb",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Schaltglas2_Schalten",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 880,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c17889fc5020234",
+        "type": "function",
+        "z": "1f38efcab4d46bcb",
+        "name": "darken sliding door",
+        "func": "msg.payload = \"OFF\";\nglobal.solution = \"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 280,
+        "wires": [
+            [
+                "a6fcce494cba93af",
+                "6efc4587ab205f16"
+            ]
+        ]
+    },
+    {
+        "id": "59d0fd40c7c774b0",
+        "type": "subflow:6fa62d3cf639421d",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "x": 950,
+        "y": 300,
+        "wires": [
+            [
+                "45845ceae1535b28"
+            ]
+        ]
+    },
+    {
+        "id": "ab8bce6891b0f429",
+        "type": "subflow:bf7a2448618a44c0",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "59da99d8f73a79ef"
+            ]
+        ]
+    },
+    {
+        "id": "b4690d501cfbd735",
+        "type": "change",
+        "z": "2fc64b777ecd3f99",
+        "name": "setwordtomorse",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "-- --- .-. -.._",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "ab8bce6891b0f429"
+            ]
+        ]
+    },
+    {
+        "id": "53e1cd1f56b59e3d",
+        "type": "switch",
+        "z": "2fc64b777ecd3f99",
+        "name": "validateInput",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "false",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 360,
+        "wires": [
+            [
+                "bcbb9e52e2265519"
+            ],
+            [
+                "b0f5794a9f19d1f8"
+            ]
+        ]
+    },
+    {
+        "id": "59da99d8f73a79ef",
+        "type": "subflow:0f6bb0577b9dbf44",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "53e1cd1f56b59e3d"
+            ]
+        ]
+    },
+    {
+        "id": "d7ef844ceb07b080",
+        "type": "openhab2-out2",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel2",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 680,
+        "y": 480,
+        "wires": [
+            [
+                "8a197df364ff51bc"
+            ]
+        ]
+    },
+    {
+        "id": "4313aa96ee5638db",
+        "type": "openhab2-out2",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel3",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 1100,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b667ad7e95c1771",
+        "type": "switch",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "b0f5794a9f19d1f8"
+            ],
+            [
+                "f4e6b34d851882e9"
+            ]
+        ]
+    },
+    {
+        "id": "a25c3025273e6556",
+        "type": "openhab2-get2",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel1",
+        "topic": "",
+        "sendnull": false,
+        "x": 220,
+        "y": 60,
+        "wires": [
+            [
+                "1b667ad7e95c1771"
+            ]
+        ]
+    },
+    {
+        "id": "f4e6b34d851882e9",
+        "type": "subflow:d4171ab7a5329fae",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "a25c3025273e6556"
+            ]
+        ]
+    },
+    {
+        "id": "bcbb9e52e2265519",
+        "type": "change",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 420,
+        "wires": [
+            [
+                "d7ef844ceb07b080"
+            ]
+        ]
+    },
+    {
+        "id": "b0f5794a9f19d1f8",
+        "type": "openhab2-get2",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel2",
+        "topic": "",
+        "sendnull": false,
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "b0e45b30cde3f51c"
+            ]
+        ]
+    },
+    {
+        "id": "b0e45b30cde3f51c",
+        "type": "switch",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "8a197df364ff51bc"
+            ],
+            [
+                "b4690d501cfbd735"
+            ]
+        ]
+    },
+    {
+        "id": "8a197df364ff51bc",
+        "type": "openhab2-get2",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel3",
+        "topic": "",
+        "sendnull": false,
+        "x": 740,
+        "y": 220,
+        "wires": [
+            [
+                "99a853edeb487dcb"
+            ]
+        ]
+    },
+    {
+        "id": "45845ceae1535b28",
+        "type": "switch",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "false",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 970,
+        "y": 380,
+        "wires": [
+            [
+                "a7c08e358adc8658"
+            ],
+            [
+                "8a197df364ff51bc"
+            ]
+        ]
+    },
+    {
+        "id": "a7c08e358adc8658",
+        "type": "change",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 440,
+        "wires": [
+            [
+                "4313aa96ee5638db"
+            ]
+        ]
+    },
+    {
+        "id": "99a853edeb487dcb",
+        "type": "switch",
+        "z": "2fc64b777ecd3f99",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 240,
+        "wires": [
+            [],
+            [
+                "59d0fd40c7c774b0"
+            ]
+        ]
+    },
+    {
+        "id": "0a285bd8d7be21c0",
+        "type": "openhab2-get2",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel4",
+        "topic": "",
+        "sendnull": false,
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "56edb00fd3682209"
+            ]
+        ]
+    },
+    {
+        "id": "98977524b303f189",
+        "type": "openhab2-get2",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel5",
+        "topic": "",
+        "sendnull": false,
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "060a19b5801f248f"
+            ]
+        ]
+    },
+    {
+        "id": "56edb00fd3682209",
+        "type": "switch",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "98977524b303f189"
+            ],
+            [
+                "94684d8017b4287b"
+            ]
+        ]
+    },
+    {
+        "id": "060a19b5801f248f",
+        "type": "switch",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 300,
+        "wires": [
+            [
+                "ebbfde05b5e634b1"
+            ],
+            [
+                "319050055b6d434b"
+            ]
+        ]
+    },
+    {
+        "id": "ebbfde05b5e634b1",
+        "type": "openhab2-get2",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel6",
+        "topic": "",
+        "sendnull": false,
+        "x": 860,
+        "y": 220,
+        "wires": [
+            [
+                "7ab4b2ec5516262a"
+            ]
+        ]
+    },
+    {
+        "id": "7ab4b2ec5516262a",
+        "type": "switch",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 850,
+        "y": 300,
+        "wires": [
+            [],
+            [
+                "7efcda49cedabbdf"
+            ]
+        ]
+    },
+    {
+        "id": "94684d8017b4287b",
+        "type": "subflow:3347a66305174949",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "x": 280,
+        "y": 380,
+        "wires": [
+            [
+                "0a285bd8d7be21c0"
+            ]
+        ]
+    },
+    {
+        "id": "319050055b6d434b",
+        "type": "subflow:2bbaa4d617b0dd5d",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "x": 570,
+        "y": 380,
+        "wires": [
+            [
+                "98977524b303f189"
+            ]
+        ]
+    },
+    {
+        "id": "7efcda49cedabbdf",
+        "type": "subflow:cfaa662af1c8614c",
+        "z": "75f4edaae8eccb65",
+        "name": "",
+        "x": 840,
+        "y": 380,
+        "wires": [
+            [
+                "ebbfde05b5e634b1"
+            ]
+        ]
+    },
+    {
+        "id": "2030cf0d25b5917b",
+        "type": "subflow:5780ee2bd2b12f4e",
+        "z": "1b62e5719772c24e",
+        "name": "",
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "b8b27f831db556d7"
+            ]
+        ]
+    },
+    {
+        "id": "b8b27f831db556d7",
+        "type": "openhab2-get2",
+        "z": "1b62e5719772c24e",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel7",
+        "topic": "",
+        "sendnull": false,
+        "x": 220,
+        "y": 60,
+        "wires": [
+            [
+                "b8b5a2d818b07758"
+            ]
+        ]
+    },
+    {
+        "id": "b8b5a2d818b07758",
+        "type": "switch",
+        "z": "1b62e5719772c24e",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [],
+            [
+                "2030cf0d25b5917b"
+            ]
+        ]
+    },
+    {
+        "id": "a0a37d0dd704d9e3",
+        "type": "switch",
+        "z": "12ea3df3067aa2d2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": ".",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "-",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": " ",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 490,
+        "y": 360,
+        "wires": [
+            [
+                "3f466f4d92e856c7"
+            ],
+            [
+                "3f466f4d92e856c7"
+            ],
+            [
+                "3f466f4d92e856c7"
+            ]
+        ]
+    },
+    {
+        "id": "a2eddc5c6a404f92",
+        "type": "split",
+        "z": "12ea3df3067aa2d2",
+        "name": "moesecode splitter",
+        "splt": "1",
+        "spltType": "len",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "a0a37d0dd704d9e3"
+            ]
+        ]
+    },
+    {
+        "id": "e1d6e2f5fe5d13ad",
+        "type": "inject",
+        "z": "12ea3df3067aa2d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": ".-.. .- -- .--. . -.",
+        "payloadType": "str",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "a2eddc5c6a404f92"
+            ]
+        ]
+    },
+    {
+        "id": "b714e887dc21d695",
+        "type": "join",
+        "z": "12ea3df3067aa2d2",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 770,
+        "y": 360,
+        "wires": [
+            [
+                "6869e62f5cf2b276"
+            ]
+        ]
+    },
+    {
+        "id": "3f466f4d92e856c7",
+        "type": "template",
+        "z": "12ea3df3067aa2d2",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 640,
+        "y": 300,
+        "wires": [
+            [
+                "b714e887dc21d695"
+            ]
+        ]
+    },
+    {
+        "id": "6869e62f5cf2b276",
+        "type": "debug",
+        "z": "12ea3df3067aa2d2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2b228f59724163c0",
+        "type": "split",
+        "z": "bf7a2448618a44c0",
+        "name": "moesecode splitter",
+        "splt": "1",
+        "spltType": "len",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": true,
+        "addname": "",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "387b9e4c5e107b21"
+            ]
+        ]
+    },
+    {
+        "id": "28a57de26f20903b",
+        "type": "inject",
+        "z": "bf7a2448618a44c0",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-- --- .-. -.._",
+        "payloadType": "str",
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "2b228f59724163c0"
+            ]
+        ]
+    },
+    {
+        "id": "6b8be4e16602ca5d",
+        "type": "delay",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 300,
+        "wires": [
+            [
+                "94f6f2709e8486ff"
+            ]
+        ]
+    },
+    {
+        "id": "d4511514016e1099",
+        "type": "function",
+        "z": "bf7a2448618a44c0",
+        "name": "texttomorse",
+        "func": "if(msg.payload == \".\"){\n    msg.delay = 2;\n    msg.info = \"b\"\n    \n}\n    \n    else if (msg.payload == \"-\"){\n    msg.delay = 2;\n    msg.info = \"r\"\n    }\n    \n    else if(msg.payload == \" \"){\n    msg.info = \"d\"\n    msg.payload = \"OFF\"\n    }\nelse if (msg.payload == \"_\") {\n    msg.info = \"end\"\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 480,
+        "wires": [
+            [
+                "92ca6a4e3a656494"
+            ]
+        ]
+    },
+    {
+        "id": "c6467fe410ca768f",
+        "type": "openhab2-out2",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Hue_Lampe1_Schalter",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 820,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "94f6f2709e8486ff",
+        "type": "change",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 240,
+        "wires": [
+            [
+                "c6467fe410ca768f"
+            ]
+        ]
+    },
+    {
+        "id": "789191629c9f4e50",
+        "type": "change",
+        "z": "bf7a2448618a44c0",
+        "name": "blau(kurz)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "240,50,83",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "3b4f2d2a99a50c0a"
+            ]
+        ]
+    },
+    {
+        "id": "387b9e4c5e107b21",
+        "type": "delay",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 220,
+        "y": 360,
+        "wires": [
+            [
+                "d4511514016e1099"
+            ]
+        ]
+    },
+    {
+        "id": "92ca6a4e3a656494",
+        "type": "switch",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "property": "info",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "b",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "r",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "end",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 330,
+        "y": 560,
+        "wires": [
+            [
+                "789191629c9f4e50"
+            ],
+            [
+                "91782142002690c3"
+            ],
+            [
+                "30e9fd563b6afbb4"
+            ]
+        ]
+    },
+    {
+        "id": "3b4f2d2a99a50c0a",
+        "type": "openhab2-out2",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Hue_Lampe1_Farbe",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 880,
+        "y": 540,
+        "wires": [
+            [
+                "b751378d7c196fa6"
+            ]
+        ]
+    },
+    {
+        "id": "91782142002690c3",
+        "type": "change",
+        "z": "bf7a2448618a44c0",
+        "name": "rot(lang)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "4,97,100",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 620,
+        "wires": [
+            [
+                "3b4f2d2a99a50c0a"
+            ]
+        ]
+    },
+    {
+        "id": "50bfcceb99edf2d0",
+        "type": "openhab2-out2",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Hue_Lampe1_Schalter",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 740,
+        "y": 360,
+        "wires": [
+            [
+                "6b8be4e16602ca5d"
+            ]
+        ]
+    },
+    {
+        "id": "b751378d7c196fa6",
+        "type": "change",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "50bfcceb99edf2d0"
+            ]
+        ]
+    },
+    {
+        "id": "14f5866fd0693054",
+        "type": "delay",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 780,
+        "wires": [
+            [
+                "c8fd4d23bde5c67c"
+            ]
+        ]
+    },
+    {
+        "id": "96b8a3c71d332220",
+        "type": "openhab2-out2",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Hue_Lampe1_Schalter",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 900,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8fd4d23bde5c67c",
+        "type": "change",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 720,
+        "wires": [
+            [
+                "96b8a3c71d332220"
+            ]
+        ]
+    },
+    {
+        "id": "3591f75c251d957d",
+        "type": "openhab2-out2",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Hue_Lampe1_Schalter",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 560,
+        "y": 840,
+        "wires": [
+            [
+                "14f5866fd0693054"
+            ]
+        ]
+    },
+    {
+        "id": "4ef14992e9dcf342",
+        "type": "change",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 840,
+        "wires": [
+            [
+                "3591f75c251d957d"
+            ]
+        ]
+    },
+    {
+        "id": "88e37f47e972fbb9",
+        "type": "openhab2-out2",
+        "z": "bf7a2448618a44c0",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Hue_Lampe1_Farbe",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 360,
+        "y": 780,
+        "wires": [
+            [
+                "4ef14992e9dcf342"
+            ]
+        ]
+    },
+    {
+        "id": "30e9fd563b6afbb4",
+        "type": "change",
+        "z": "bf7a2448618a44c0",
+        "name": "rot(lang)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "107,100,100",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 720,
+        "wires": [
+            [
+                "88e37f47e972fbb9"
+            ]
+        ]
+    },
+    {
+        "id": "26e42f537bef4534",
+        "type": "openhab2-in2",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Drucktaster_Kurz1",
+        "topic": "",
+        "initialstate": false,
+        "whenupdated": true,
+        "whencommand": false,
+        "whenchanged": false,
+        "changedfrom": "",
+        "changedto": "",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "86b336a41a87cf5b"
+            ]
+        ]
+    },
+    {
+        "id": "6b5479111cf88b74",
+        "type": "openhab2-in2",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iMultimedia_Homematic_Drucktaster_Lang1",
+        "topic": "",
+        "initialstate": false,
+        "whenupdated": true,
+        "whencommand": true,
+        "whenchanged": false,
+        "changedfrom": "",
+        "changedto": "",
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "f49759e3d2e2eb33"
+            ]
+        ]
+    },
+    {
+        "id": "6d1edbd16797e01b",
+        "type": "switch",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "property": "morse",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "--..-.-.-....-.",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "--..-.-.-....-.",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 270,
+        "y": 400,
+        "wires": [
+            [
+                "70e1f2c3bd391fbb"
+            ],
+            [
+                "7c82472fc4d5416a"
+            ]
+        ]
+    },
+    {
+        "id": "6614c264e3b0f859",
+        "type": "change",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": ".",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "1d53d7d5288a2d88"
+            ]
+        ]
+    },
+    {
+        "id": "08cd1f256963abb7",
+        "type": "change",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "-",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "1d53d7d5288a2d88"
+            ]
+        ]
+    },
+    {
+        "id": "70e1f2c3bd391fbb",
+        "type": "change",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c82472fc4d5416a",
+        "type": "change",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ddd38813d70982d",
+        "type": "debug",
+        "z": "0f6bb0577b9dbf44",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "morse",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "86b336a41a87cf5b",
+        "type": "switch",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "6614c264e3b0f859"
+            ]
+        ]
+    },
+    {
+        "id": "f49759e3d2e2eb33",
+        "type": "switch",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "08cd1f256963abb7"
+            ]
+        ]
+    },
+    {
+        "id": "1d53d7d5288a2d88",
+        "type": "join",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "15",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 710,
+        "y": 200,
+        "wires": [
+            [
+                "f70ba16459eaf68a"
+            ]
+        ]
+    },
+    {
+        "id": "f70ba16459eaf68a",
+        "type": "change",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "morse",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "morse",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 300,
+        "wires": [
+            [
+                "5ddd38813d70982d",
+                "2117f818a5b8af00"
+            ]
+        ]
+    },
+    {
+        "id": "2117f818a5b8af00",
+        "type": "file",
+        "z": "0f6bb0577b9dbf44",
+        "name": "",
+        "filename": "/home/michael/EscapeRoom/Workshop Dateien/Raum 1/Laptop Dateien/morseinput.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1240,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf4379ce0869f25b",
+        "type": "openhab2-out2",
+        "z": "d4171ab7a5329fae",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel1",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 700,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e10f1d01a27846f",
+        "type": "file in",
+        "z": "d4171ab7a5329fae",
+        "name": "",
+        "filename": "/home/michael/EscapeRoom/Workshop Dateien/Raum 1/Laptop Dateien/numble.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "4833e7596a678bc6"
+            ]
+        ]
+    },
+    {
+        "id": "4833e7596a678bc6",
+        "type": "switch",
+        "z": "d4171ab7a5329fae",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "4269",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "4269",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "1102d4f56484ac12"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1102d4f56484ac12",
+        "type": "change",
+        "z": "d4171ab7a5329fae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 460,
+        "wires": [
+            [
+                "cf4379ce0869f25b"
+            ]
+        ]
+    },
+    {
+        "id": "c1b3e561eea96d9c",
+        "type": "openhab2-out2",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel6",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 900,
+        "y": 420,
+        "wires": [
+            [
+                "5eb674c2dd841754"
+            ]
+        ]
+    },
+    {
+        "id": "e0f128f1a220535d",
+        "type": "change",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 340,
+        "wires": [
+            [
+                "c1b3e561eea96d9c"
+            ]
+        ]
+    },
+    {
+        "id": "81edf6d4751a86f5",
+        "type": "openhab2-get2",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iBad_Hue_Lampe2_Schalter",
+        "topic": "",
+        "sendnull": false,
+        "x": 420,
+        "y": 240,
+        "wires": [
+            [
+                "464a837249c05c24"
+            ]
+        ]
+    },
+    {
+        "id": "db8628e7d5dc7405",
+        "type": "openhab2-get2",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iBad_Hue_Lampe1_Schalter",
+        "topic": "",
+        "sendnull": false,
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "e1bd24ab1a67625b"
+            ]
+        ]
+    },
+    {
+        "id": "796d3a0e58466524",
+        "type": "openhab2-get2",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iBad_Hue_Lampe3_Schalter",
+        "topic": "",
+        "sendnull": false,
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [
+                "eb1fb5ec536fcdfc"
+            ]
+        ]
+    },
+    {
+        "id": "f249fcc446930a47",
+        "type": "openhab2-get2",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iBad_Hue_Lampe4_Schalter",
+        "topic": "",
+        "sendnull": false,
+        "x": 540,
+        "y": 380,
+        "wires": [
+            [
+                "54074669a77b7e5e"
+            ]
+        ]
+    },
+    {
+        "id": "3f63f658c7a91152",
+        "type": "openhab2-get2",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iBad_Hue_Lampe5_Schalter",
+        "topic": "",
+        "sendnull": false,
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "7d4e1a449241f184"
+            ]
+        ]
+    },
+    {
+        "id": "ff3171d99e0b35c7",
+        "type": "openhab2-get2",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iBad_Hue_Lampe6_Schalter",
+        "topic": "",
+        "sendnull": false,
+        "x": 620,
+        "y": 540,
+        "wires": [
+            [
+                "3ef451544a668d50"
+            ]
+        ]
+    },
+    {
+        "id": "e1bd24ab1a67625b",
+        "type": "switch",
+        "z": "5780ee2bd2b12f4e",
+        "name": "1",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "81edf6d4751a86f5"
+            ],
+            [
+                "8854326d0ad4f808"
+            ]
+        ]
+    },
+    {
+        "id": "eb1fb5ec536fcdfc",
+        "type": "switch",
+        "z": "5780ee2bd2b12f4e",
+        "name": "0",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "f249fcc446930a47"
+            ],
+            [
+                "8854326d0ad4f808"
+            ]
+        ]
+    },
+    {
+        "id": "54074669a77b7e5e",
+        "type": "switch",
+        "z": "5780ee2bd2b12f4e",
+        "name": "1",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "3f63f658c7a91152"
+            ],
+            [
+                "8854326d0ad4f808"
+            ]
+        ]
+    },
+    {
+        "id": "464a837249c05c24",
+        "type": "switch",
+        "z": "5780ee2bd2b12f4e",
+        "name": "1",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 320,
+        "wires": [
+            [
+                "796d3a0e58466524"
+            ],
+            [
+                "8854326d0ad4f808"
+            ]
+        ]
+    },
+    {
+        "id": "3ef451544a668d50",
+        "type": "switch",
+        "z": "5780ee2bd2b12f4e",
+        "name": "0",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 660,
+        "wires": [
+            [
+                "e0f128f1a220535d"
+            ],
+            [
+                "8854326d0ad4f808"
+            ]
+        ]
+    },
+    {
+        "id": "7d4e1a449241f184",
+        "type": "switch",
+        "z": "5780ee2bd2b12f4e",
+        "name": "0",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "ff3171d99e0b35c7"
+            ],
+            [
+                "8854326d0ad4f808"
+            ]
+        ]
+    },
+    {
+        "id": "5eb674c2dd841754",
+        "type": "change",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8854326d0ad4f808",
+        "type": "change",
+        "z": "5780ee2bd2b12f4e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "61739da350a16f3c",
+        "type": "file in",
+        "z": "3347a66305174949",
+        "name": "",
+        "filename": "/home/michael/EscapeRoom/Workshop Dateien/Raum 2/Laptop Dateien/schaedel.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 460,
+        "y": 120,
+        "wires": [
+            [
+                "86ca4520e6b3496c"
+            ]
+        ]
+    },
+    {
+        "id": "121315e8df53bdc1",
+        "type": "change",
+        "z": "3347a66305174949",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 280,
+        "wires": [
+            [
+                "49a8a9d5e2eead34"
+            ]
+        ]
+    },
+    {
+        "id": "49a8a9d5e2eead34",
+        "type": "openhab2-out2",
+        "z": "3347a66305174949",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel4",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 260,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86ca4520e6b3496c",
+        "type": "switch",
+        "z": "3347a66305174949",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "597155",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "597155",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "121315e8df53bdc1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a4acf5d2170ae0e5",
+        "type": "file in",
+        "z": "2bbaa4d617b0dd5d",
+        "name": "",
+        "filename": "/home/michael/EscapeRoom/Workshop Dateien/Raum 2/Laptop Dateien/mordtat.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "34f66836fbdbb9d2"
+            ]
+        ]
+    },
+    {
+        "id": "34f66836fbdbb9d2",
+        "type": "switch",
+        "z": "2bbaa4d617b0dd5d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "869370",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "869370",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "e3f8bc4273c0add0"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e3f8bc4273c0add0",
+        "type": "change",
+        "z": "2bbaa4d617b0dd5d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "b5522a6415d74843"
+            ]
+        ]
+    },
+    {
+        "id": "b5522a6415d74843",
+        "type": "openhab2-out2",
+        "z": "2bbaa4d617b0dd5d",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel5",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 180,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db3c6526cb35d166",
+        "type": "switch",
+        "z": "cfaa662af1c8614c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "5f02ef225717cacd"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5f02ef225717cacd",
+        "type": "openhab2-out2",
+        "z": "cfaa662af1c8614c",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomLevel6",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 280,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0848416d9eab09a",
+        "type": "subflow:2fc64b777ecd3f99",
+        "z": "fe6c42b3020c2f20",
+        "name": "",
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "0a1542461d64e078"
+            ]
+        ]
+    },
+    {
+        "id": "2216ca1ac20b422d",
+        "type": "openhab2-get2",
+        "z": "fe6c42b3020c2f20",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomStart",
+        "topic": "",
+        "sendnull": false,
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "ca31488a7ad2d636"
+            ]
+        ]
+    },
+    {
+        "id": "ca31488a7ad2d636",
+        "type": "switch",
+        "z": "fe6c42b3020c2f20",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "f0848416d9eab09a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0a1542461d64e078",
+        "type": "subflow:75f4edaae8eccb65",
+        "z": "fe6c42b3020c2f20",
+        "name": "",
+        "x": 830,
+        "y": 240,
+        "wires": [
+            [
+                "80e2b89cb71654af"
+            ]
+        ]
+    },
+    {
+        "id": "87355e2e327711b5",
+        "type": "inject",
+        "z": "fe6c42b3020c2f20",
+        "name": "Starten",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "9bfe8645842e4b94"
+            ]
+        ]
+    },
+    {
+        "id": "80e2b89cb71654af",
+        "type": "subflow:1b62e5719772c24e",
+        "z": "fe6c42b3020c2f20",
+        "name": "",
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bfe8645842e4b94",
+        "type": "openhab2-out2",
+        "z": "fe6c42b3020c2f20",
+        "name": "EscapeRoomStart starten",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomStart",
+        "topic": "ItemCommand",
+        "payload": "ON",
+        "onlywhenchanged": false,
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "2216ca1ac20b422d"
+            ]
+        ]
+    },
+    {
+        "id": "13125901dbbf6f75",
+        "type": "inject",
+        "z": "fe6c42b3020c2f20",
+        "name": "Beenden",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "ef3dd0d8a4c49385"
+            ]
+        ]
+    },
+    {
+        "id": "ef3dd0d8a4c49385",
+        "type": "openhab2-out2",
+        "z": "fe6c42b3020c2f20",
+        "name": "EscapeRoomStart beenden",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "EscapeRoomStart",
+        "topic": "ItemCommand",
+        "payload": "OFF",
+        "onlywhenchanged": false,
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "2216ca1ac20b422d"
+            ]
+        ]
+    },
+    {
+        "id": "f074c645391a2fe1",
+        "type": "openhab2-out2",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iIoT_Hue_Lampe1_Farbe",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 270,
+        "y": 180,
+        "wires": [
+            [
+                "a5f096c4fca098f6"
+            ]
+        ]
+    },
+    {
+        "id": "fa6d6b3892a0ffe5",
+        "type": "openhab2-out2",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iIoT_Hue_Lampe2_Farbe",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "c83f15c7df191ce8"
+            ]
+        ]
+    },
+    {
+        "id": "d7f2a1c30e0aa1dc",
+        "type": "openhab2-out2",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iIoT_Hue_Lampe4_Farbe",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 270,
+        "y": 540,
+        "wires": [
+            [
+                "98404a5cd861477b"
+            ]
+        ]
+    },
+    {
+        "id": "c8985174df5cda78",
+        "type": "openhab2-out2",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iIoT_Hue_Lampe5_Farbe",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 270,
+        "y": 660,
+        "wires": [
+            [
+                "f664e45440a0b7f1"
+            ]
+        ]
+    },
+    {
+        "id": "540156f3ade4806c",
+        "type": "openhab2-out2",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iIoT_Hue_Lampe6_Farbe",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 270,
+        "y": 780,
+        "wires": [
+            [
+                "317e551b6579fad5"
+            ]
+        ]
+    },
+    {
+        "id": "a5f096c4fca098f6",
+        "type": "change",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 240,
+        "wires": [
+            [
+                "fa6d6b3892a0ffe5"
+            ]
+        ]
+    },
+    {
+        "id": "c83f15c7df191ce8",
+        "type": "change",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 360,
+        "wires": [
+            [
+                "2c0dedf287dce14a"
+            ]
+        ]
+    },
+    {
+        "id": "0435e45cc49235c2",
+        "type": "change",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 480,
+        "wires": [
+            [
+                "d7f2a1c30e0aa1dc"
+            ]
+        ]
+    },
+    {
+        "id": "98404a5cd861477b",
+        "type": "change",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 600,
+        "wires": [
+            [
+                "c8985174df5cda78"
+            ]
+        ]
+    },
+    {
+        "id": "f664e45440a0b7f1",
+        "type": "change",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 720,
+        "wires": [
+            [
+                "540156f3ade4806c"
+            ]
+        ]
+    },
+    {
+        "id": "33b63a104080fb02",
+        "type": "change",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "f074c645391a2fe1"
+            ]
+        ]
+    },
+    {
+        "id": "e524d94608017a93",
+        "type": "inject",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 60,
+        "wires": [
+            [
+                "33b63a104080fb02"
+            ]
+        ]
+    },
+    {
+        "id": "2c0dedf287dce14a",
+        "type": "openhab2-out2",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iIoT_Hue_Lampe3_Farbe",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "0435e45cc49235c2"
+            ]
+        ]
+    },
+    {
+        "id": "317e551b6579fad5",
+        "type": "change",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 260,
+        "wires": [
+            [
+                "6cb3ca2e7453cc8f"
+            ]
+        ]
+    },
+    {
+        "id": "6cb3ca2e7453cc8f",
+        "type": "openhab2-out2",
+        "z": "2572ac62ce7c1cdf",
+        "name": "",
+        "controller": "7f3ab95cd4f4305f",
+        "itemname": "iIoT_Hue_Lampen_Schalter",
+        "topic": "ItemCommand",
+        "payload": "",
+        "onlywhenchanged": false,
+        "x": 600,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    }
+]

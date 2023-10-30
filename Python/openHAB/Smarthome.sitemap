@@ -1,0 +1,23 @@
+        Text label="Escape Room" {
+            Switch item=EscapeRoomStart
+            Switch item=EscapeRoomLevel1
+            Switch item=EscapeRoomLevel2
+            Switch item=EscapeRoomLevel3
+            Switch item=EscapeRoomLevel4
+            Switch item=EscapeRoomLevel5
+            Switch item=EscapeRoomLevel6
+            Switch item=EscapeRoomLevel7
+            Switch item=EscapeRoomLevel8
+            Switch item=EscapeRoomLevel9
+            Switch item=EscapeRoomLevel10
+            Switch item=EscapeRoomLevel11
+            Switch item=EscapeRoomLevel12
+            Switch item=EscapeRoomLevel13
+            Switch item=EscapeRoomLevel14
+            Switch item=EscapeRoomLevel15
+            Switch item=EscapeRoomLevel16
+            Switch item=EscapeRoomLevel17
+            Switch item=EscapeRoomLevel18
+            Switch item=EscapeRoomLevel19
+            Switch item=EscapeRoomLevel20
+        }
