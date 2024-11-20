@@ -1,0 +1,37 @@
+19 Nov 17:08:46 - [info] 
+
+Willkommen bei Node-RED
+===================
+
+19 Nov 17:08:46 - [info] Node-RED Version: v3.1.0
+19 Nov 17:08:46 - [info] Node.js  Version: v16.13.2
+19 Nov 17:08:46 - [info] Linux 6.5.7-surface-2 x64 LE
+19 Nov 17:08:47 - [info] Paletten-Nodes werden geladen
+19 Nov 17:08:49 - [info] Dashboard version 3.6.0 started at /ui
+19 Nov 17:08:49 - [info] Einstellungsdatei: /home/michael/.node-red/settings.js
+19 Nov 17:08:49 - [info] Kontextspeicher: default [module=memory]
+19 Nov 17:08:49 - [info] Benutzerverzeichnis: /home/michael/.node-red
+19 Nov 17:08:49 - [warn] Projekte deaktiviert: editorTheme.projects.enabled=false
+19 Nov 17:08:49 - [info] Flow-Datei: /home/michael/Smart-Home-Escape-Room-Workshop/EscapeRoom/Technik/flows.json
+19 Nov 17:08:49 - [warn] 
+---------------------------------------------------------------------
+Die Datei mit den Flow-Credentials wird mit einem vom System
+generierten Schlüssel verschlüsselt.
+Wenn der vom System generierte Schlüssel aus irgendeinem Grund
+verloren geht, kann die Datei mit den Credentials nicht
+wiederhergestellt werden. Sie muss dann gelöscht und die
+Credentials müssen erneut eingestellt werden.
+Es sollte ein eigener Schlüssel mit Hilfe der Option
+'credentialSecret' in der Einstellungsdatei vorgegeben werden.
+Node-RED wird dann die Datei mit den Flow-Credentials
+bei der nächsten Übernahme (deploy) einer Änderung erneut
+verschlüsseln.
+---------------------------------------------------------------------
+19 Nov 17:08:49 - [warn] Verschlüsselte Credentials nicht gefunden
+19 Nov 17:08:50 - [info] Server wird jetzt auf http://127.0.0.1:1880/ ausgeführt
+19 Nov 17:08:50 - [info] Flows werden gestartet
+19 Nov 17:08:50 - [info] Flows sind gestartet
+19 Nov 17:08:53 - [info] [openhab2-controller2:test-controller] Opened connection to http://openHABAdmin:hJem2jz6@192.168.0.5:8080/rest/events
+19 Nov 17:08:57 - [info] [openhab2-controller2:test-controller] Connection established. Emitting 41565 InitialEvents.
+19 Nov 17:09:24 - [error] [file in:f0848416d9eab09a-f4e6b34d851882e9-7e10f1d01a27846f] Error: ENOENT: no such file or directory, open '/home/michael/EscapeRoom/Workshop Dateien/Raum 1/Laptop Dateien/numble.txt'
+19 Nov 17:09:28 - [error] [file in:f0848416d9eab09a-f4e6b34d851882e9-7e10f1d01a27846f] Error: ENOENT: no such file or directory, open '/home/michael/EscapeRoom/Workshop Dateien/Raum 1/Laptop Dateien/numble.txt'

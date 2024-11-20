@@ -11,6 +11,8 @@ BASE_PATH = "/home/michael/Smart-Home-Escape-Room-Workshop/Python/Laptop/"
 def start_escape_room():
     pid_file = "EscapeRoom.lock"
 
+    print(f"Prüfe auf Datei: {BASE_PATH + 'PID/' + pid_file}")
+
     if os.path.isfile(BASE_PATH + "PID/" + pid_file):
         print("Der Escape Room wird bereits ausgeführt!")
         return
@@ -18,7 +20,7 @@ def start_escape_room():
         app_process = subprocess.Popen(['firefox', '--new-window', "http://localhost:1880/"])
 
         time.sleep(3)
-    
+
         starten_png_left = None
         while starten_png_left == None:
             try:
@@ -38,3 +40,4 @@ def start_escape_room():
 
 if __name__ == "__main__":
     start_escape_room()
+
