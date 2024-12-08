@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 import os
-import subprocess
 import pyautogui
 import time
+from PyChromeController import PyChromeController
 
 pyautogui.FAILSAFE = False
 
@@ -15,7 +15,23 @@ def flow_to_fix():
         print("Der Escape Room wird bereits ausgeführt!")
         return
     else:
-        app_process = subprocess.Popen(['firefox', '--new-window', "http://localhost:1880/"])
+        controller = PyChromeController()
+        url = "http://localhost:1880/"
+
+        if os.path.isfile(BASE_PATH + pid_file):
+            with open(BASE_PATH + "EscapeRoom.lock", 'r') as read_pid:
+                session_id = read_pid.read().strip()
+
+                controller.attach_browser_session(session_id)
+                # Fenster maximieren
+                controller.maximize_window()
+
+                controller.check_and_open_tab_by_url("http://localhost:1880/")
+        else:        
+            controller.start_browser_session()
+            controller.open_url(url)
+
+            session_id = controller.driver.session_id
 
         time.sleep(3)
     
@@ -34,7 +50,7 @@ def flow_to_fix():
             time.sleep(0.3)
 
         with open(BASE_PATH + "PID/" + pid_file, 'w') as write_pid:
-            write_pid.write(str(app_process.pid))
+            write_pid.write(session_id)
 
 if __name__ == "__main__":
     flow_to_fix()
