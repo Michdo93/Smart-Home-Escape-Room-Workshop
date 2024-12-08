@@ -1,21 +1,30 @@
 import os
-import subprocess
 import pyautogui
 import time
+from PyChromeController import PyChromeController
 
 pyautogui.FAILSAFE = False
 
 BASE_PATH = "/home/michael/Smart-Home-Escape-Room-Workshop/Python/Laptop/"
 
-def start_escape_room():
+def stop_escape_room():
     pid_file = "EscapeRoom.lock"
+
+    controller = PyChromeController()
+    url = "http://localhost:1880/"
 
     if os.path.isfile(BASE_PATH + pid_file):
         with open(BASE_PATH + pid_file, 'r') as read_pid:
-            pid = int(read_pid.read())
-    else:
-        app_process = subprocess.Popen(['firefox', '--new-window', "http://localhost:1880/"])
-        pid = app_process.pid
+            session_id = read_pid.read().strip()
+
+            controller.attach_browser_session(session_id)
+            # Fenster maximieren
+            controller.maximize_window()
+
+            controller.switch_tab_by_url(url)
+    else:        
+        controller.start_browser_session()
+        controller.open_url(url)
 
         time.sleep(3)
     
@@ -35,14 +44,9 @@ def start_escape_room():
     
     time.sleep(3)
 
-    try:
-        os.kill(pid, 15)
-    except ProcessLookupError:
-        print(f"Der Prozess mit der PID {pid} wurde nicht gefunden")
-    except Exception as e:
-        print(f"Fehler Beenden des Prozesses: {str(e)}.")
+    controller.close_browser()
 
     os.remove(BASE_PATH + pid_file)
 
 if __name__ == "__main__":
-    start_escape_room()
+    stop_escape_room()
