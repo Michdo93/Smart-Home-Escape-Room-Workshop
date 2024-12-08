@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 import os
-import subprocess
 import pyautogui
 import time
+from PyChromeController import PyChromeController
 
 pyautogui.FAILSAFE = False
 
@@ -17,7 +17,12 @@ def start_escape_room():
         print("Der Escape Room wird bereits ausgeführt!")
         return
     else:
-        app_process = subprocess.Popen(['firefox', '--new-window', "http://localhost:1880/"])
+        # PyChromeController initialisieren
+        controller = PyChromeController()
+
+        controller.start_browser_session()
+        # Browser starten und Tab öffnen
+        controller.open_url("http://localhost:1880/")
 
         time.sleep(3)
 
@@ -35,9 +40,14 @@ def start_escape_room():
                 break
             time.sleep(0.3)
 
+        # Minimieren des Browserfensters
+        controller.minimize_window()
+        
+        # Session ID speichern (automatisch von der Bibliothek verwaltet)
+        session_id = controller.driver.session_id
+
         with open(BASE_PATH + "PID/" + pid_file, 'w') as write_pid:
-            write_pid.write(str(app_process.pid))
+            write_pid.write(str(session_id))
 
 if __name__ == "__main__":
     start_escape_room()
-
