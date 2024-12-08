@@ -2,6 +2,7 @@ import subprocess
 import signal
 import sys
 import os
+from PyChromeController import PyChromeController
 
 ESCAPE_ROOM_BASE_PATH = '/home/michael/Smart-Home-Escape-Room-Workshop'
 
@@ -106,18 +107,17 @@ def open_file(file_type, room, file):
     else:
         print(f"Für den Raum {room} konnte auf diesem System kein Pfad gefunden werden!")
         return
-    
 
     if "http" not in filename:
         file_path = os.path.join(path, filename)
 
         pid_file = filename.split(".")[0] + "_process.lock"
-    else:
-        pid_file = file + "_process.lock"
 
-    if os.path.isfile(PID_FILE_PATH + "/" + pid_file):
-        print(f"Die Anwendung für die Datei {filename} läuft bereits und wird durch {pid_file} gelockt!")
-        return
+        if os.path.isfile(PID_FILE_PATH + "/" + pid_file):
+            print(f"Die Anwendung für die Datei {filename} läuft bereits und wird durch {pid_file} gelockt!")
+            return
+    else:
+        pid_file = "EscapeRoom.lock"
 
     try:
         if file_type == "ZIP":
@@ -125,7 +125,21 @@ def open_file(file_type, room, file):
         elif file_type == "PDF":
             app_process = subprocess.Popen(['evince', file_path])
         elif file_type == "HTML":
-            app_process = subprocess.Popen(['firefox', '--new-window', filename])
+            controller = PyChromeController()
+
+            if os.path.isfile(PID_FILE_PATH + "/" + pid_file):
+                with open(PID_FILE_PATH + "/" + pid_file, "r") as file:
+                    session_id = file.read().strip()
+
+                controller.attach_browser_session(session_id)
+                controller.maximize_window()
+                controller.check_and_open_tab_by_url(filename)
+            else:
+                controller.start_browser_session()
+                controller.open_url(filename)
+
+                with open(PID_FILE_PATH + "/" + pid_file, "w") as file:
+                    file.write(controller.driver.session_id)
         elif file_type == "PNG":
             app_process = subprocess.Popen(['eog', file_path])
         elif file_type == "TXT":
@@ -137,8 +151,9 @@ def open_file(file_type, room, file):
     except Exception as e:
         print(f"Fehler beim Öffnen der {file_type}-Datei: {str(e)}.")
 
-    with open(PID_FILE_PATH + "/" + pid_file, 'w') as write_pid:
-        write_pid.write(str(app_process.pid))
+    if "http" not in filename:
+        with open(PID_FILE_PATH + "/" + pid_file, 'w') as write_pid:
+            write_pid.write(str(app_process.pid))
 
 def close_file(file_type, room, file):
     if getFilenameByFile(room, file) != "":
@@ -149,24 +164,35 @@ def close_file(file_type, room, file):
 
     if "http" not in filename:
         pid_file = filename.split(".")[0] + "_process.lock"
+
+        if os.path.isfile(PID_FILE_PATH + "/" + pid_file):
+            with open(PID_FILE_PATH + "/" + pid_file, 'r') as read_pid:
+                pid = int(read_pid.read())
+            
+            try:
+                os.kill(pid, signal.SIGTERM)
+            except ProcessLookupError:
+                print(f"Der Prozess mit der PID {pid} wurde nicht gefunden")
+            except Exception as e:
+                print(f"Fehler Beenden des Prozesses: {str(e)}.")
+
+            os.remove(PID_FILE_PATH + "/" + pid_file)
+        else:
+            print(f"Die Lock-Datei {pid_file} für die Datei {filename} konnte nicht gefunden werden. Dies bedeutet, dass die Anwendung nicht läuft bzw. schon beendet wurde.")
     else:
-        pid_file = file + "_process.lock"
+        pid_file = "EscapeRoom.lock"
 
-    if os.path.isfile(PID_FILE_PATH + "/" + pid_file):
-        with open(PID_FILE_PATH + "/" + pid_file, 'r') as read_pid:
-            pid = int(read_pid.read())
-        
-        try:
-            os.kill(pid, signal.SIGTERM)
-        except ProcessLookupError:
-            print(f"Der Prozess mit der PID {pid} wurde nicht gefunden")
-        except Exception as e:
-            print(f"Fehler Beenden des Prozesses: {str(e)}.")
+        controller = PyChromeController()
 
-        os.remove(PID_FILE_PATH + "/" + pid_file)
-    else:
-        print(f"Die Lock-Datei {pid_file} für die Datei {filename} konnte nicht gefunden werden. Dies bedeutet, dass die Anwendung nicht läuft bzw. schon beendet wurde.")
+        if os.path.isfile(PID_FILE_PATH + "/" + pid_file):
+            with open(PID_FILE_PATH + "/" + pid_file, "r") as file:
+                session_id = file.read().strip()
 
+            controller.attach_browser_session(session_id)
+            controller.maximize_window()
+            controller.close_tab_by_url(filename)
+            controller.minimize_window()
+    
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Verwendung: python3 automate_escape_room_laptop.py <open/close> <filetype> <room> <filename>")
@@ -180,4 +206,3 @@ if __name__ == "__main__":
             open_file(file_type, room, filename)
         elif action == "close":
             close_file(file_type, room, filename)
-
