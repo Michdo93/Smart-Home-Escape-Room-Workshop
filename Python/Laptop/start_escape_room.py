@@ -47,7 +47,7 @@ def start_escape_room():
         session_id = controller.driver.session_id
 
         with open(BASE_PATH + "PID/" + pid_file, 'w') as write_pid:
-            write_pid.write(str(session_id))
+            write_pid.write(session_id)
 
 if __name__ == "__main__":
     start_escape_room()
