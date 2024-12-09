@@ -3,6 +3,7 @@ import signal
 import sys
 import os
 from PyChromeController import PyChromeController
+from selenium import webdriver
 
 ESCAPE_ROOM_BASE_PATH = '/home/michael/Smart-Home-Escape-Room-Workshop'
 
@@ -126,27 +127,23 @@ def open_file(file_type, room, file):
             app_process = subprocess.Popen(['evince', file_path])
         elif file_type == "HTML":
             controller = PyChromeController()
+            session_id = None
 
             if os.path.isfile(PID_FILE_PATH + "/" + pid_file):
                 with open(PID_FILE_PATH + "/" + pid_file, "r") as file:
                     session_id = file.read().strip()
 
-                try:
-                    controller.attach_browser_session(session_id)
-                    if not is_session_active(controller):
-                        raise Exception("Session is no longer active.")
-                except Exception:
-                    print("Die gespeicherte Sitzung ist ungültig. Starte eine neue Sitzung...")
-                    controller.start_browser_session()
+            if session_id:
+                controller.attach_browser_session(session_id)
+                controller.maximize_window()
+                controller.check_and_open(filename)
             else:
-                print("Keine Sitzungs-ID gefunden. Starte eine neue Sitzung...")
                 controller.start_browser_session()
+                controller.open_url(filename)
 
-            controller.open_url(filename)
-
-            # Sitzungs-ID speichern
-            with open(PID_FILE_PATH + "/" + pid_file, "w") as file:
-                file.write(controller.driver.session_id)
+                # Sitzungs-ID speichern
+                with open(PID_FILE_PATH + "/" + pid_file, "w") as file:
+                    file.write(controller.driver.session_id)
         elif file_type == "PNG":
             app_process = subprocess.Popen(['eog', file_path])
         elif file_type == "TXT":
@@ -188,23 +185,23 @@ def close_file(file_type, room, file):
             print(f"Die Lock-Datei {pid_file} für die Datei {filename} konnte nicht gefunden werden. Dies bedeutet, dass die Anwendung nicht läuft bzw. schon beendet wurde.")
     else:
         pid_file = "EscapeRoom.lock"
-
         controller = PyChromeController()
+        session_id = None
 
         if os.path.isfile(PID_FILE_PATH + "/" + pid_file):
             with open(PID_FILE_PATH + "/" + pid_file, "r") as file:
                 session_id = file.read().strip()
 
+        if session_id:
             controller.attach_browser_session(session_id)
             controller.maximize_window()
-            
-            try:
-                controller.close_tab_by_url(filename)
-            except Exception as e:
-                print(f"Fehler beim Schließen des Tabs: {str(e)}")
 
-            controller.minimize_window()
-    
+            if len(controller.driver.window_handles) > 1:
+                controller.close_tab_by_url(filename)
+                controller.minimize_window()
+            else:
+                controller.close_browser()
+
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Verwendung: python3 automate_escape_room_laptop.py <open/close> <filetype> <room> <filename>")
