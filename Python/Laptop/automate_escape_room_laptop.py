@@ -136,7 +136,7 @@ def open_file(file_type, room, file):
             if session_id:
                 controller.attach_browser_session(session_id)
                 controller.maximize_window()
-                controller.check_and_open(filename)
+                controller.check_and_open_tab_by_url(filename)
             else:
                 controller.start_browser_session()
                 controller.open_url(filename)
