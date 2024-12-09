@@ -131,15 +131,22 @@ def open_file(file_type, room, file):
                 with open(PID_FILE_PATH + "/" + pid_file, "r") as file:
                     session_id = file.read().strip()
 
-                controller.attach_browser_session(session_id)
-                controller.maximize_window()
-                controller.check_and_open_tab_by_url(filename)
+                try:
+                    controller.attach_browser_session(session_id)
+                    if not is_session_active(controller):
+                        raise Exception("Session is no longer active.")
+                except Exception:
+                    print("Die gespeicherte Sitzung ist ungültig. Starte eine neue Sitzung...")
+                    controller.start_browser_session()
             else:
+                print("Keine Sitzungs-ID gefunden. Starte eine neue Sitzung...")
                 controller.start_browser_session()
-                controller.open_url(filename)
 
-                with open(PID_FILE_PATH + "/" + pid_file, "w") as file:
-                    file.write(controller.driver.session_id)
+            controller.open_url(filename)
+
+            # Sitzungs-ID speichern
+            with open(PID_FILE_PATH + "/" + pid_file, "w") as file:
+                file.write(controller.driver.session_id)
         elif file_type == "PNG":
             app_process = subprocess.Popen(['eog', file_path])
         elif file_type == "TXT":
@@ -190,7 +197,12 @@ def close_file(file_type, room, file):
 
             controller.attach_browser_session(session_id)
             controller.maximize_window()
-            controller.close_tab_by_url(filename)
+            
+            try:
+                controller.close_tab_by_url(filename)
+            except Exception as e:
+                print(f"Fehler beim Schließen des Tabs: {str(e)}")
+
             controller.minimize_window()
     
 if __name__ == "__main__":
