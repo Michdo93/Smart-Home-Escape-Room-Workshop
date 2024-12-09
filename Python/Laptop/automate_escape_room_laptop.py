@@ -201,6 +201,7 @@ def close_file(file_type, room, file):
                 controller.minimize_window()
             else:
                 controller.close_browser()
+                os.remove(PID_FILE_PATH + "/" + pid_file)
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
