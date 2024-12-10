@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 import pyautogui
 import time
 from PyChromeController import PyChromeController
@@ -113,14 +114,18 @@ class EscapeRoomController:
         self.stop_browser("EscapeRoom.lock")
 
 if __name__ == "__main__":
-    controller = EscapeRoomController()
-    
-    action = input("Geben Sie 'start', 'stop' oder 'fix' ein: ").strip().lower()
-    if action == "start":
-        controller.start_escape_room()
-    elif action == "stop":
-        controller.stop_escape_room()
-    elif action == "fix":
-        controller.flow_to_fix()
+    if len(sys.argv) != 2:
+        print("Verwendung: python3 EscapeRoomController.py <start/stop/fix>")
     else:
-        print("Ungültige Eingabe. Bitte geben Sie 'start', 'stop' oder 'fix' ein.")
+        action = sys.argv[1].lower()
+
+        controller = EscapeRoomController()
+        
+        if action == "start":
+            controller.start_escape_room()
+        elif action == "stop":
+            controller.stop_escape_room()
+        elif action == "fix":
+            controller.flow_to_fix()
+        else:
+            print("Ungültige Eingabe. Bitte geben Sie 'start', 'stop' oder 'fix' ein.")
