@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Escape Room starten
-Exec=/home/michael/Smart-Home-Escape-Room-Workshop/start_escape_room.sh
+Exec=/home/$USER/Smart-Home-Escape-Room-Workshop/start_escape_room.sh
 Terminal=false
-Icon=/home/michael/Smart-Home-Escape-Room-Workshop/start_escape_room.png
+Icon=/home/$USER/Smart-Home-Escape-Room-Workshop/start_escape_room.png
 StartupNotify=false
