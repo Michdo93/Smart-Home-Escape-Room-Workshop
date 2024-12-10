@@ -118,7 +118,13 @@ sudo reboot
 
 ## Installation
 
-to be continued ...
+```bash
+cd ~
+git clone https://github.com/Michdo93/Smart-Home-Escape-Room-Workshop
+cd Smart-Home-Escape-Room-Workshop
+cp start_escape_room.desktop ~/Desktop
+cp stop_escape_room.desktop ~/Desktop
+```
 
 ---
 
