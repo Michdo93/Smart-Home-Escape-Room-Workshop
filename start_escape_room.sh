@@ -4,10 +4,18 @@ NODE_RED_PROCESS="/home/$USER/.nvm/versions/node/v16.13.2/bin/node-red"
 NODE_RED_SCRIPT="/home/$USER/Smart-Home-Escape-Room-Workshop/start_node_red.sh"
 PYTHON_SCRIPT="/home/$USER/Smart-Home-Escape-Room-Workshop/Python/Laptop/start_escape_room.py"
 LOG_FILE="/home/$USER/Smart-Home-Escape-Room-Workshop/start_node_red.log"
+SELENIUM_PROCESS="selenium-server"
+SELENIUM_COMMAND="java -jar /usr/local/bin/selenium-server-4.27.0.jar standalone"
 
 # Prüfen, ob Node-RED lokal läuft
 function is_node_red_running() {
     pgrep -f "$NODE_RED_PROCESS" > /dev/null 2>&1
+    return $?
+}
+
+# Prüfen, ob Selenium lokal läuft
+function is_selenium_running() {
+    pgrep -f "$SELENIUM_PROCESS" > /dev/null 2>&1
     return $?
 }
 
@@ -36,6 +44,21 @@ else
         fi
     else
         echo "openHAB ist nicht erreichbar. Node-RED wird nicht gestartet."
+        exit 1
+    fi
+fi
+
+# Selenium-Server starten, wenn er nicht läuft
+if is_selenium_running; then
+    echo "Selenium-Server läuft bereits."
+else
+    echo "Starte Selenium-Server..."
+    $SELENIUM_COMMAND > /dev/null 2>&1 &
+    sleep 2
+    if is_selenium_running; then
+        echo "Selenium-Server erfolgreich gestartet."
+    else
+        echo "Fehler: Selenium-Server konnte nicht gestartet werden."
         exit 1
     fi
 fi
