@@ -1,9 +1,9 @@
 #!/bin/bash
 
-NODE_RED_PROCESS="/home/michael/.nvm/versions/node/v16.13.2/bin/node-red"
-NODE_RED_SCRIPT="/home/michael/Smart-Home-Escape-Room-Workshop/start_node_red.sh"
-PYTHON_SCRIPT="/home/michael/Smart-Home-Escape-Room-Workshop/Python/Laptop/start_escape_room.py"
-LOG_FILE="/home/michael/Smart-Home-Escape-Room-Workshop/start_node_red.log"
+NODE_RED_PROCESS="/home/$USER/.nvm/versions/node/v16.13.2/bin/node-red"
+NODE_RED_SCRIPT="/home/$USER/Smart-Home-Escape-Room-Workshop/start_node_red.sh"
+PYTHON_SCRIPT="/home/$USER/Smart-Home-Escape-Room-Workshop/Python/Laptop/start_escape_room.py"
+LOG_FILE="/home/$USER/Smart-Home-Escape-Room-Workshop/start_node_red.log"
 
 # Prüfen, ob Node-RED lokal läuft
 function is_node_red_running() {
