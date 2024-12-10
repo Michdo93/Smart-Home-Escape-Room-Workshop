@@ -5,13 +5,13 @@ import os
 from PyChromeController import PyChromeController
 from selenium import webdriver
 
-ESCAPE_ROOM_BASE_PATH = '/home/michael/Smart-Home-Escape-Room-Workshop'
+ESCAPE_ROOM_BASE_PATH = os.path.expanduser("~/Smart-Home-Escape-Room-Workshop/")
 
 PID_FILE_PATH = ESCAPE_ROOM_BASE_PATH + '/Python/Laptop/PID'
 
-ROOM1_BASE_PATH = ESCAPE_ROOM_BASE_PATH + '/EscapeRoom/Workshop Dateien/Raum 1/Laptop Dateien'
-ROOM2_BASE_PATH = ESCAPE_ROOM_BASE_PATH + '/EscapeRoom/Workshop Dateien/Raum 2/Laptop Dateien'
-ROOM3_BASE_PATH = ESCAPE_ROOM_BASE_PATH + '/EscapeRoom/Workshop Dateien/Raum 3/Magic Mirror Dateien'
+ROOM1_BASE_PATH = ESCAPE_ROOM_BASE_PATH + 'EscapeRoom/Workshop Dateien/Raum 1/Laptop Dateien'
+ROOM2_BASE_PATH = ESCAPE_ROOM_BASE_PATH + 'EscapeRoom/Workshop Dateien/Raum 2/Laptop Dateien'
+ROOM3_BASE_PATH = ESCAPE_ROOM_BASE_PATH + 'EscapeRoom/Workshop Dateien/Raum 3/Magic Mirror Dateien'
 ROOM4_BASE_PATH = ESCAPE_ROOM_BASE_PATH + ''
 ROOM5_BASE_PATH = ESCAPE_ROOM_BASE_PATH + ''
 
