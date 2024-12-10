@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Escape Room beenden
-Exec=/home/michael/Smart-Home-Escape-Room-Workshop/stop_escape_room.sh
+Exec=/home/$USER/Smart-Home-Escape-Room-Workshop/stop_escape_room.sh
 Terminal=false
-Icon=/home/michael/Smart-Home-Escape-Room-Workshop/stop_escape_room.png
+Icon=/home/$USER/Smart-Home-Escape-Room-Workshop/stop_escape_room.png
 StartupNotify=false
