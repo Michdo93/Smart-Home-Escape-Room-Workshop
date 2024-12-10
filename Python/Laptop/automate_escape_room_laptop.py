@@ -3,7 +3,6 @@ import signal
 import sys
 import os
 from PyChromeController import PyChromeController
-from selenium import webdriver
 
 ESCAPE_ROOM_BASE_PATH = os.path.expanduser("~/Smart-Home-Escape-Room-Workshop/")
 
