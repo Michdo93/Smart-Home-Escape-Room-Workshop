@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-BASE_PATH = "/home/michael/Smart-Home-Escape-Room-Workshop/Python/Laptop/"
+BASE_PATH = os.path.expanduser("~/Smart-Home-Escape-Room-Workshop/Python/Laptop/")
 
 if __name__ == "__main__":
     # Verwendung: python3 automate_escape_room_laptop.py <open/close> <filetype> <room> <filename>
