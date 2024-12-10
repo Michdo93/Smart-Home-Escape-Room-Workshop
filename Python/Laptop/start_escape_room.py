@@ -6,7 +6,7 @@ from PyChromeController import PyChromeController
 
 pyautogui.FAILSAFE = False
 
-BASE_PATH = "/home/michael/Smart-Home-Escape-Room-Workshop/Python/Laptop/"
+BASE_PATH = os.path.expanduser("~/Smart-Home-Escape-Room-Workshop/Python/Laptop/")
 
 def start_escape_room():
     pid_file = "EscapeRoom.lock"
