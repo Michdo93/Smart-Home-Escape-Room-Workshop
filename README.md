@@ -84,13 +84,35 @@ Then you can run it with:
 NotipyDesktop MyApp "Test Notification" "This is a test message."
 ```
 
-### NVM, NodeJS and PM2
+### NVM and Node.js
 
-to be continued ...
+```bash
+sudo apt install gcc g++ make -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+nvm use 16.13.2
+nvm alias default 16.13.2
+
+echo 'PATH=$PATH:/home/$USER/.nvm/versions/node/v16.13.2/bin' >> /etc/environment
+
+sudo ln -s /home/$USER/.nvm/versions/node/v16.13.2/bin/node /usr/bin/node
+sudo ln -s /home/$USER/.nvm/versions/node/v16.13.2/bin/npm /usr/bin/npm
+```
 
 ### Node-RED
 
-to be continued ...
+```bash
+sudo npm install -g --unsafe-perm node-red
+```
+
+### PM2
+
+```bash
+sudo npm install -g pm2
+pm2 startup systemd
+echo 'PM2_HOME="/root/.pm2"' >> /etc/environment
+sudo reboot
+```
 
 ---
 
