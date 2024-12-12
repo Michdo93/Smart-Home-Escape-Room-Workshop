@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NODE_RED_PROCESS="/home/$USER/.nvm/versions/node/v16.13.2/bin/node-red"
+NODE_RED_PROCESS="node-red"
 PYTHON_SCRIPT="/home/$USER/Smart-Home-Escape-Room-Workshop/Python/Laptop/stop_escape_room.py"
 SELENIUM_PROCESS="selenium-server"
 
