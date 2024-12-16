@@ -96,7 +96,7 @@ nvm install 16.13.2
 nvm use 16.13.2
 nvm alias default 16.13.2
 
-echo 'PATH=$PATH:/home/$USER/.nvm/versions/node/v16.13.2/bin' >> /etc/environment
+echo 'PATH=$PATH:/home/$USER/.nvm/versions/node/v16.13.2/bin' | sudo tee -a /etc/environment
 
 sudo ln -s /home/$USER/.nvm/versions/node/v16.13.2/bin/node /usr/bin/node
 sudo ln -s /home/$USER/.nvm/versions/node/v16.13.2/bin/npm /usr/bin/npm
