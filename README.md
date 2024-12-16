@@ -105,6 +105,12 @@ sudo sed -i '/^PATH=/ s|"$|:/home/'"$USER"'/.nvm/versions/node/v16.13.2/bin"|' /
 npm install -g --unsafe-perm node-red@2.2.3
 ```
 
+### Node-RED openHAB-Controller
+
+```bash
+npm install -g node-red-contrib-openhab2
+```
+
 ### PM2
 
 ```bash
