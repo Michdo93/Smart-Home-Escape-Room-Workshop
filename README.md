@@ -97,9 +97,6 @@ nvm use 16.13.2
 nvm alias default 16.13.2
 
 sudo sed -i '/^PATH=/ s|"$|:/home/'"$USER"'/.nvm/versions/node/v16.13.2/bin"|' /etc/environment
-
-sudo ln -s /home/$USER/.nvm/versions/node/v16.13.2/bin/node /usr/bin/node
-sudo ln -s /home/$USER/.nvm/versions/node/v16.13.2/bin/npm /usr/bin/npm
 ```
 
 ### Node-RED
