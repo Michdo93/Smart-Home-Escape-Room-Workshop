@@ -90,6 +90,9 @@ NotipyDesktop MyApp "Test Notification" "This is a test message."
 sudo apt install gcc g++ make -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
+source ~/.bashrc
+
+nvm install 16.13.2
 nvm use 16.13.2
 nvm alias default 16.13.2
 
