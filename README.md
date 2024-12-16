@@ -108,7 +108,7 @@ npm install -g --unsafe-perm node-red@2.2.3
 ### Node-RED openHAB-Controller
 
 ```bash
-npm install -g node-red-contrib-openhab2
+npm install -g node-red-contrib-openhab3
 ```
 
 ### PM2
