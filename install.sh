@@ -44,7 +44,11 @@ EOF
 chmod +x "$DESKTOP_DIR/start_escape_room.desktop"
 chmod +x "$DESKTOP_DIR/stop_escape_room.desktop"
 
-echo "Desktop-Einträge erstellt und nach $DESKTOP_DIR kopiert."
+# "Allow Launching" für die .desktop-Dateien aktivieren
+gio set "$DESKTOP_DIR/start_escape_room.desktop" "metadata::trusted" true
+gio set "$DESKTOP_DIR/stop_escape_room.desktop" "metadata::trusted" true
+
+echo "Desktop-Einträge erstellt, nach $DESKTOP_DIR kopiert und 'Allow Launching' aktiviert."
 
 # Pfad zur flows.json
 FLOW_FILE="./EscapeRoom/Technik/flows.json"
