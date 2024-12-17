@@ -23,7 +23,7 @@ cat <<EOF > "$DESKTOP_DIR/start_escape_room.desktop"
 [Desktop Entry]
 Type=Application
 Name=Escape Room starten
-Exec=bash "$START_SCRIPT"
+Exec=$START_SCRIPT
 Terminal=false
 Icon=$START_ICON
 StartupNotify=false
@@ -34,7 +34,7 @@ cat <<EOF > "$DESKTOP_DIR/stop_escape_room.desktop"
 [Desktop Entry]
 Type=Application
 Name=Escape Room beenden
-Exec=bash "$STOP_SCRIPT"
+Exec=$STOP_SCRIPT
 Terminal=false
 Icon=$STOP_ICON
 StartupNotify=false
