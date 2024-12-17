@@ -45,3 +45,17 @@ chmod +x "$DESKTOP_DIR/start_escape_room.desktop"
 chmod +x "$DESKTOP_DIR/stop_escape_room.desktop"
 
 echo "Desktop-Einträge erstellt und nach $DESKTOP_DIR kopiert."
+
+# Pfad zur flows.json
+FLOW_FILE="./EscapeRoom/Technik/flows.json"
+
+# Überprüfen, ob die flows.json existiert
+if [ ! -f "$FLOW_FILE" ]; then
+  echo "Fehler: $FLOW_FILE nicht gefunden."
+  exit 1
+fi
+
+# $USER in der flows.json ersetzen
+sed -i "s|\\$USER|$USER|g" "$FLOW_FILE"
+
+echo "flows.json erfolgreich aktualisiert: $FLOW_FILE"
