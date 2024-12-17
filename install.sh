@@ -56,6 +56,6 @@ if [ ! -f "$FLOW_FILE" ]; then
 fi
 
 # $USER in der flows.json ersetzen
-sed -i "s|\\$USER|$USER|g" "$FLOW_FILE"
+sed -i "s|\\\$USER|$USER|g" "$FLOW_FILE"
 
 echo "flows.json erfolgreich aktualisiert: $FLOW_FILE"
