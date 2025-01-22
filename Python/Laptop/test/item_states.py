@@ -1,66 +1,66 @@
-from openhab_test_suite import OpenHABConnector, ItemTester
+from openhab import CRUD
 
-# Establishing connection to the OpenHAB API
-connector = OpenHABConnector("http://<your_ip>:8080", "<username>", "<password>")
+# Verbindung zu openHAB herstellen
+crud = CRUD("", "", "")  # Zugangsdaten anpassen
 
-# Instantiating the ItemTester
-tester = ItemTester(connector)
-
-# List of items
-itemsToCheck = [
-    ("iMultimedia_Homematic_Schaltglas1_Schalten", "Switch", "ON", "ON"),
-    ("iMultimedia_Homematic_Schaltglas2_Schalten", "Switch", "ON", "ON"),
-    ("iMultimedia_Homematic_Fenster1_Position", "String", None, ["OPEN", "CLOSED", "TILTED"]),
-    ("iMultimedia_Homematic_Fenster2_Position", "String", None, ["OPEN", "CLOSED", "TILTED"]),
-    ("iMultimedia_Homematic_Fenster3_Position", "String", None, ["OPEN", "CLOSED", "TILTED"]),
-    ("iMultimedia_Hue_Lampe1_Schalter", "Switch", "ON", "ON"),
-    ("iMultimedia_Hue_Lampe1_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iMultimedia_Hue_Lampe2_Schalter", "Switch", "ON", "ON"),
-    ("iMultimedia_Hue_Lampe2_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iMultimedia_Hue_Lampe3_Schalter", "Switch", "ON", "ON"),
-    ("iMultimedia_Hue_Lampe3_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iMultimedia_Hue_Lampe4_Schalter", "Switch", "ON", "ON"),
-    ("iMultimedia_Hue_Lampe4_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iMultimedia_Hue_Lampe5_Schalter", "Switch", "ON", "ON"),
-    ("iMultimedia_Hue_Lampe5_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iMultimedia_Hue_Lampe6_Schalter", "Switch", "ON", "ON"),
-    ("iMultimedia_Hue_Lampe6_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iMultimedia_Homematic_Drucktaster_Kurz1", "Switch", "ON", "ON"),
-    ("iMultimedia_Homematic_Drucktaster_Lang1", "Switch", "ON", "ON"),
-    ("iBad_Hue_Lampe1_Schalter", "Switch", "ON", "ON"),
-    ("iBad_Hue_Lampe2_Schalter", "Switch", "ON", "ON"),
-    ("iBad_Hue_Lampe3_Schalter", "Switch", "ON", "ON"),
-    ("iBad_Hue_Lampe4_Schalter", "Switch", "ON", "ON"),
-    ("iBad_Hue_Lampe5_Schalter", "Switch", "ON", "ON"),
-    ("iBad_Hue_Lampe6_Schalter", "Switch", "ON", "ON"),
-    ("iIoT_Hue_Lampe1_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iIoT_Hue_Lampe2_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iIoT_Hue_Lampe3_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iIoT_Hue_Lampe4_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iIoT_Hue_Lampe5_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iIoT_Hue_Lampe6_Farbe", "Color", "255,0,0", "255,0,0"),
-    ("iIoT_Hue_Lampen_Schalter", "Switch", "ON", "ON"),
+# Liste der Items
+items_to_check = [
+    "iMultimedia_Homematic_Schaltglas1_Schalten",
+    "iMultimedia_Homematic_Schaltglas2_Schalten",
+    "iMultimedia_Homematic_Fenster1_Position",
+    "iMultimedia_Homematic_Fenster2_Position",
+    "iMultimedia_Homematic_Fenster3_Position",
+    "iMultimedia_Hue_Lampe1_Schalter",
+    "iMultimedia_Hue_Lampe1_Farbe",
+    "iMultimedia_Hue_Lampe2_Schalter",
+    "iMultimedia_Hue_Lampe2_Farbe",
+    "iMultimedia_Hue_Lampe3_Schalter",
+    "iMultimedia_Hue_Lampe3_Farbe",
+    "iMultimedia_Hue_Lampe4_Schalter",
+    "iMultimedia_Hue_Lampe4_Farbe",
+    "iMultimedia_Hue_Lampe5_Schalter",
+    "iMultimedia_Hue_Lampe5_Farbe",
+    "iMultimedia_Hue_Lampe6_Schalter",
+    "iMultimedia_Hue_Lampe6_Farbe",
+    "iMultimedia_Homematic_Drucktaster_Kurz1",
+    "iMultimedia_Homematic_Drucktaster_Lang1",
+    "iBad_Hue_Lampe1_Schalter",
+    "iBad_Hue_Lampe2_Schalter",
+    "iBad_Hue_Lampe3_Schalter",
+    "iBad_Hue_Lampe4_Schalter",
+    "iBad_Hue_Lampe5_Schalter",
+    "iBad_Hue_Lampe6_Schalter",
+    "iIoT_Hue_Lampe1_Farbe",
+    "iIoT_Hue_Lampe2_Farbe",
+    "iIoT_Hue_Lampe3_Farbe",
+    "iIoT_Hue_Lampe4_Farbe",
+    "iIoT_Hue_Lampe5_Farbe",
+    "iIoT_Hue_Lampe6_Farbe",
+    "iIoT_Hue_Lampen_Schalter",
 ]
 
-# Check item states
-for itemName, itemType, command, expectedState in itemsToCheck:
-    if itemType == "Color":
-        print(f"{itemName}: ", tester.testColor(itemName=itemName, command=command, expectedState=expectedState))
-    elif itemType == "Contact":
-        print(f"{itemName}: ", tester.testContact(itemName=itemName, update=command, expectedState=expectedState))
-    elif itemType == "DateTime":
-        print(f"{itemName}: ", tester.testDateTime(itemName=itemName, command=command, expectedState=expectedState))
-    elif itemType == "Dimmer":
-        print(f"{itemName}: ", tester.testDimmer(itemName=itemName, command=command, expectedState=expectedState))
-    elif itemType == "Location":
-        print(f"{itemName}: ", tester.testLocation(itemName=itemName, update=command, expectedState=expectedState))
-    elif itemType == "Number":
-        print(f"{itemName}: ", tester.testNumber(itemName=itemName, command=command, expectedState=expectedState))
-    elif itemType == "Player":
-        print(f"{itemName}: ", tester.testPlayer(itemName=itemName, command=command, expectedState=expectedState))
-    elif itemType == "Rollershutter":
-        print(f"{itemName}: ", tester.testRollershutter(itemName=itemName, command=command, expectedState=expectedState))
-    elif itemType == "String":
-        print(f"{itemName}: ", tester.testString(itemName=itemName, command=command, expectedState=expectedState))
-    elif itemType == "Switch":
-        print(f"{itemName}: ", tester.testSwitch(itemName=itemName, command=command, expectedState=expectedState))
+# Ergebnisse speichern
+states = {}
+failed_items = []
+
+# Zustände der Items abrufen
+for item in items_to_check:
+    try:
+        state = crud.getState(item)
+        states[item] = state
+    except Exception as e:
+        print(f"Fehler beim Abrufen des Zustands von {item}: {e}")
+        failed_items.append(item)
+
+# Ergebnisse ausgeben
+print("Zustände der Items:")
+for item, state in states.items():
+    print(f"{item}: {state}")
+
+if failed_items:
+    print("\nFehlgeschlagene Abfragen:")
+    for item in failed_items:
+        print(item)
+
+# Sitzung schließen
+crud.close()
