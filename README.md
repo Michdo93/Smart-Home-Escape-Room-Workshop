@@ -120,6 +120,12 @@ echo 'PM2_HOME="/root/.pm2"' >> /etc/environment
 sudo reboot
 ```
 
+### openhab-test-suite
+
+```bash
+pip install openhab-test-suite
+```
+
 ---
 
 ## Installation
