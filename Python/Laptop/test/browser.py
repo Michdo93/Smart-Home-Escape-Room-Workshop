@@ -1,5 +1,6 @@
 import subprocess
 import time
+import os
 
 BASE_PATH = os.path.expanduser("~/Smart-Home-Escape-Room-Workshop/Python/Laptop/")
 
